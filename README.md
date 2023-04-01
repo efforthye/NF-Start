@@ -1,4 +1,4 @@
-# NF-Start
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=NF-Start&fontAlignY=40&fontSize=100&desc=&descAlignY=65&animation=twinkling)
 
 # 실행 방법
 1. 서버 열기 /server : npm run start:dev
@@ -23,3 +23,5 @@ git pull origin dev
 git checkout 본인branch
 git rebase dev
 ```bash
+
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=e2e4e3&height=130)
