@@ -22,6 +22,6 @@ git checkout dev
 git pull origin dev
 git checkout 본인branch
 git rebase dev
-```bash
+```
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=e2e4e3&height=130)
