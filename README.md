@@ -16,7 +16,7 @@ git checkout dev
 git merge 본인branch
 git push original dev
 ```
-- Merge 이후
+- Merge 이후 
 ```bash
 git checkout dev
 git pull origin dev
