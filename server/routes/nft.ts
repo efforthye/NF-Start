@@ -50,7 +50,7 @@ const upload = multer({
 
 // ai 이미지 생성
 // const { generateImage } = require('../controllers/openaiController')
-router.post("/generateimage", async (req, res) => {
+router.post("/generateimage", (req, res) => {
   console.log(req.body);
   res.end();
 });
