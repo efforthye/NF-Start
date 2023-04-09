@@ -45,12 +45,21 @@ function getNftContract() {
 
 async function getTokenId() {
     const deployed = getNftContract();
-    return deployed.methods.getTokenId().call();
+    return parseInt(await deployed.methods.getTokenId().call());
 }
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Hello, world!');
+    }, 1000);
+});
+
+promise.then((result) => {
+    console.log(result);
+});
 
 // 기본 이미지 nft 등록 부분
 router.post('/regist', upload.single('file'), async (req, res) => {
-    console.log(upload.single('file'));
     if (!req.file) return res.send({ data: '파일 업로드 실패' });
 
     const { name, desc, num: volume, account } = req.body;
@@ -58,7 +67,6 @@ router.post('/regist', upload.single('file'), async (req, res) => {
 
     const imageData = fs.createReadStream(`./uploads/${imgfile.filename}`);
 
-    // 0. 배포된 컨트랙트를 불러온다.
     const deployed = getNftContract();
     const tokenId = await getTokenId();
 
