@@ -10,7 +10,7 @@
 ```bash
 git checkout dev
 git pull original dev
-git checkout 본인branch
+git checkout 본인branch 
 git rebase dev
 git checkout dev
 git merge 본인branch
